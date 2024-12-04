@@ -1,6 +1,7 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import Navbar from "@/components/ui/Navbar";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -18,7 +19,9 @@ export default function RootLayout({
       <body
         className={cn("relative h-full font-sans antialiased", poppins.variable)}
       >
-        <main className="relative flex flex-col min-h-screen"> <div className="flex-grow flex-1">{children}</div> </main>
+        <main className="relative flex flex-col min-h-screen">
+            <Navbar/>
+           <div className="flex-grow flex-1">{children}</div> </main>
       </body>
     </html>
   );
